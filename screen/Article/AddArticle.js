@@ -1,6 +1,6 @@
 import { Button, StyleSheet, Text, TextInput, View } from 'react-native'
 import React, { useState } from 'react'
-
+import axios from 'axios'
 import URL from '../../constant/url'
 
 export default function AddArticle() {
@@ -21,7 +21,15 @@ export default function AddArticle() {
   }
 
   const _handleSubmit = async () => {
-    // 
+    try {
+      const { data, status } = await axios.post(URL.POST_ARTICLE, article);
+     
+      if(status === 201){
+        console.log(`Succes de la drequete`);
+      }
+    } catch (error) {
+      throw error.message
+    }
   }
 
   return (
