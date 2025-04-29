@@ -1,9 +1,9 @@
-import { StyleSheet, Text, View, FlatList, Image } from 'react-native'
+import { StyleSheet, Text, View, FlatList, Image, Pressable } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import URL from '../constant/url'
 
-export default function Home() {
+export default function Home({ navigation }) {
 
   const [articles, setArticles] = useState([]);
 
@@ -25,11 +25,17 @@ export default function Home() {
 
     return (
       <View>
-        <Image 
-          source={{ uri: item.picture }}
-          style={styles.img}
-        />
-        <Text>{item.name}</Text>
+        <Pressable
+          onPress={() => {
+            navigation.navigate('Detail', { id: item._id })
+          }}
+        >
+          <Image 
+            source={{ uri: item.picture }}
+            style={styles.img}
+          />
+          <Text>{item.name}</Text>
+        </Pressable>
       </View>
     )
   }

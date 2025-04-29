@@ -25,7 +25,7 @@ export default function AddArticle() {
       const { data, status } = await axios.post(URL.POST_ARTICLE, article);
      
       if(status === 201){
-        console.log(`Succes de la drequete`);
+        console.log(`Succes de la requete`);
       }
     } catch (error) {
       throw error.message
