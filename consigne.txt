@@ -1,0 +1,22 @@
+Mettre en place un écran d’admin permettant de visualiser tous les utilisateurs.
+
+Depuis cet écran, il doit être possible de :
+Voir la liste de tous les membres inscrits dans l'application.
+Accéder aux détails de chaque utilisateur.
+Modifier les informations d’un utilisateur.
+Supprimer un utilisateur.
+
+L’ensemble de ces fonctionnalités doit être intégré avec Redux pour la gestion de l’état.
+
+
+---------------- 
+
+1. Créer un dossier Admin dans le dossier screen
+2. Créer un composant UserAdmin
+3. Mettre en place une route pour afficher l’écran UserAdmin
+4. Ajouter un onglet (tab) "Admin" à l'interface
+5. Définir les URL pour les utilisateurs (user)
+6. Afficher tous les utilisateurs dans l’écran UserAdmin
+7. Ajouter la possibilité de sélectionner un utilisateur pour accéder à l’écran UserDetail
+8. Ajouter la possibilité de supprimer un utilisateur depuis l’écran UserAdmin
+9. Ajouter la possibilité de modifier un utilisateur
